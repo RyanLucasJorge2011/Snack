@@ -45,5 +45,33 @@ def show_score(choice, color, font, size):
     game_window.blit(score_surface, score_rect)
 
     #hfr5
-    
- 
+def game_over():
+    my-font = pygame.font.SysFont('times new roman',50)
+    game_over_surface = my_font.render(
+'sua pontuação: ' +str(score), True, green)
+game_over_rect = game_over_surface.get_rect()
+game_over_rect.midtop = (window_x/2,window_y/4)
+game_over_surface.blit(game_over_surface, game_over_rect)
+pygame.quit()
+time.sleep(2)
+pygame.quit()
+    quit()
+while True:
+     for event in pygame.event.get():
+         if event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_UP:
+                change_to = 'UP'
+if event.key == pygame.K_DOWN:
+                change_to = 'DOWN'
+if event.key == pygame.K_LEFT:
+                change_to = 'LEFT'
+if event.key == pygame.K_RIGHT:
+                change_to = 'RIGHT'
+if change_to == 'UP' and direction != 'DOWN':
+    direction = 'UP'
+if change_to == 'LEFT' and direction != 'RIGHT':
+    direction = 'LEFT'
+if change_to == 'RIGHT' and direction != 'LEFT':
+    direction = 'RIGHT'
+
+
